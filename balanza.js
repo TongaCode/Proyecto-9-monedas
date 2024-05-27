@@ -92,5 +92,5 @@ function balanza (req, res) {
   };
 };
 
-//prueba
+
 module.exports = { balanza, monedas};
