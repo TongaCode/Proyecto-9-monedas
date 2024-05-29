@@ -1,4 +1,4 @@
-const { monedas } = require("./balanza.js");
+const { monedas } = require("./balanza");
 let respuesta = 0;
 function elejir(req, res) {
 
@@ -26,8 +26,18 @@ function elejir(req, res) {
             };
             monedas[clave];
 
+            let maximoClave;
+            let maximoValor = -Infinity;
 
-            if (clave === monedas[2]) {
+            // Iterar sobre las claves y valores del objeto monedas
+            for (let clave in monedas) {
+                if (monedas[clave] > maximoValor) {
+                    maximoValor = monedas[clave];
+                    maximoClave = clave;
+                };
+            };
+
+            if (clave == maximoClave) {
                 return res.send(`Ganaste la moneda ${clave} es la mas pesada`);
             } else {
                 return res.send(`Perdiste la moneda ${clave} no es la moneda mas pesada`);
