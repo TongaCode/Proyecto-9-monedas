@@ -24,7 +24,6 @@ function elejir(req, res) {
             } else if (!monedas.hasOwnProperty(clave)) {
                 throw new Error("Solo puede ingresr numeros del 1 al 9.");
             };
-
             monedas[clave];
 
 
