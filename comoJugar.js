@@ -1,1 +1,3 @@
-res.send("Tienes 9 monedas en total y con solo dos pesajes tienes que adivinar que moneda es la mas pesada, en jugar podras poner las monedas en la balanza, en elejir podras poner la moneda que te parece mas pesada para saber si ganaste o perdiste, suerte!!!");
+const comoJugar = "Tienes 9 monedas en total que son iguales pero solo una es mas pesada que las otras, con una balanza tendras que poder sacar que moneda es mas pesada, pero ojo solo tienes dos oportunidades osea solo puedes pesar dos veces, una vez que termines puedes adivinar que moneda es la mas pesada, en jugar podras poner las monedas en la balanza, en elejir podras poner la moneda que te parece mas pesada para saber si ganaste o perdiste, suerte!!!";
+
+module.exports = {comoJugar}
