@@ -1,4 +1,5 @@
-const monedas = {
+
+let monedas = {
   1: 1,
   2: 2,
   3: 1,
@@ -10,13 +11,28 @@ const monedas = {
   9: 1,
 };
 
-function balanza (req, res) {
+function desordenarValores(obj) {
+  // Extraer los valores del objeto en un array
+  const valores = Object.values(obj);
+
+  // Función para desordenar el array (algoritmo de Fisher-Yates)
+  for (let i = valores.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [valores[i], valores[j]] = [valores[j], valores[i]];
+  }
+
+  // Reasignar los valores desordenados a las claves del objeto
+  Object.keys(obj).forEach((key, index) => {
+    obj[key] = valores[index];
+  });
+}
+
+function balanza(req, res) {
   let sumaLadoA = 0;
   let sumaLadoB = 0;
-  let respuesta = 0;
   let numerosRepetidos = false;
 
-
+  desordenarValores(monedas);
   // Validar LadoA y ladoB
   try {
     if (!req.body.ladoA || !req.body.ladoB) {
@@ -49,8 +65,6 @@ function balanza (req, res) {
       return monedas[clave];
     });
 
-
-
     //Verificacion de balanza vacia
     if (req.body.ladoA.length + req.body.ladoB.length === 0) {
       return res
@@ -73,6 +87,7 @@ function balanza (req, res) {
       throw new Error("Se encontraron números repetidos, no puedes repetir los números");
     };
 
+
     // Sumar valores de ladoA y ladoB
     sumaLadoA = ladoA.reduce((acc, val) => acc + val, 0);
     sumaLadoB = ladoB.reduce((acc, val) => acc + val, 0);
@@ -93,4 +108,4 @@ function balanza (req, res) {
 };
 
 
-module.exports = { balanza, monedas};
+module.exports = { balanza, monedas };
