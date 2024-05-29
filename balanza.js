@@ -53,6 +53,7 @@ function balanza (req, res) {
 
     //Verificacion de balanza vacia
     if (req.body.ladoA.length + req.body.ladoB.length === 0) {
+      alert("hola");
       return res
         .status(200)
         .send("Balanza perfectamente equilibrada, ingrese las monedas para comenzar a pesar.");
