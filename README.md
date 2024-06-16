@@ -1,6 +1,12 @@
 Direccion y formato del Json
 
-POST http://localhost:3000/jugar
+POST http://localhost:3000/primerPesaje
+{
+	"ladoA": [],
+	"ladoB": []
+}
+
+POST http://localhost:3000/segundoPesaje
 {
 	"ladoA": [],
 	"ladoB": []
