@@ -1,4 +1,4 @@
-const { monedas } = require("./balanza");
+const { monedas } = require("./primerPesaje");
 let respuesta = 0;
 function elejir(req, res) {
 
@@ -14,7 +14,7 @@ function elejir(req, res) {
         };
 
         if (req.body.elejir.length === 0) {
-            throw new Error("Debes ingresar un numero");
+            throw new Error("Debes ingresar una moneda");
         };
 
         //Mapear Elejir
