@@ -19,5 +19,5 @@ POST http://localhost:3000/segundoPesaje
 POST http://localhost:3000/elejir
 {
 	"elejir": []
-}git
+}
 
