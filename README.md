@@ -1,5 +1,9 @@
 Direccion y formato del Json
 
+GET http://localhost:3000/comoJugar
+
+
+(Agregue las direcciones y como jugar)
 POST http://localhost:3000/primerPesaje
 {
 	"ladoA": [],
@@ -15,6 +19,5 @@ POST http://localhost:3000/segundoPesaje
 POST http://localhost:3000/elejir
 {
 	"elejir": []
-}
+}git
 
-GET http://localhost:3000/comoJugar

@@ -1,0 +1,8 @@
+Corregir en el if me devuelve un string el maximoClave y clave es un type number
+if (clave == maximoClave) {
+                return res.send(`Ganaste la moneda ${clave} es la mas pesada`);
+            } else {
+                return res.send(`Perdiste la moneda ${clave} no es la moneda mas pesada`);
+            }
+
+Arreglar cada vez que se accede al point se reinicia el random
