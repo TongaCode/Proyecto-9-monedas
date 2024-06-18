@@ -5,4 +5,4 @@ if (clave == maximoClave) {
                 return res.send(`Perdiste la moneda ${clave} no es la moneda mas pesada`);
             }
 
-Arreglar cada vez que se accede al point se reinicia el random. unaa modificcon
+Arreglar cada vez que se accede al point se reinicia el random.
